@@ -1,0 +1,12 @@
+[package]
+name = "todo_cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clitools = { path = "/home/benn/CODE/RUST/clitools" }
+ctrlc = "3.4.0"
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3"
