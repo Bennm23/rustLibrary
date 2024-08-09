@@ -1,6 +1,8 @@
-use std::{fmt::Error, net::UdpSocket, thread};
+use std::net::UdpSocket;
+
 pub type MsgCallback = fn(&[u8], &UdpComms);
 
+#[allow(unused)]
 pub struct UdpComms {
     socket   : UdpSocket,
     addr     : String,
