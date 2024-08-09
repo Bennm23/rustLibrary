@@ -1,0 +1,59 @@
+
+.checked_item {
+    background-color: green;
+}
+
+.checked_item > label {
+
+    /* text-decoration: line-through; */
+    color: white;
+}
+
+/* .default_item {
+    background-color: black;
+    color: white;
+} */
+
+.delete_button:hover {
+
+    background-color: red;
+    color: white;
+}
+
+.delete_button {
+    border-radius: 0px;
+}
+
+.edit_button {
+    border-radius: 0;
+}
+
+.edit_button:checked {
+
+    background-color: green;
+    color : white;
+
+}
+
+.check_button {
+    min-width: 50;
+    min-height: 50;
+    border-radius: 0;
+}
+
+.check_button .check {
+    min-width: 50;
+    min-height: 50;
+    border-radius: 0;
+}
+
+.edit_active {
+
+    background-color: white;
+    color: black;
+
+}
+
+.task_entry {
+    border-radius: 0;
+}
