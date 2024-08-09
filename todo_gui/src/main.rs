@@ -7,14 +7,9 @@ mod row_data;
 use std::{sync::{Arc, Mutex}, time::{SystemTime, UNIX_EPOCH}};
 
 use gtk::{
-    gdk,
-    glib::{
+    gdk, glib::{
         self, clone, 
-    },
-    prelude::*,
-    style_context_add_provider_for_display, Align, ApplicationWindow, Button,
-    CheckButton, CssProvider, Entry, GestureDrag, ListBox, ListBoxRow,
-    ToggleButton,
+    }, prelude::*, style_context_add_provider_for_display, Align, Application, ApplicationWindow, Button, CheckButton, CssProvider, Entry, GestureDrag, ListBox, ListBoxRow, ToggleButton
 };
 use list::{TodoEntry, TodoList};
 use row_data::RowData;
@@ -23,14 +18,14 @@ const CHECKED_STYLE: &str = "checked_item";
 const DEFAULT_STYLE: &str = "default_item";
 
 fn main() {
-    // gtk::init().expect("Failed to Initialize Gtk");
+    gtk::init().expect("Failed to Initialize Gtk");
 
-    // let app = Application::builder()
-    //     .application_id("local.benn.todolist")
-    //     .build();
+    let app = Application::builder()
+        .application_id("local.benn.todolist")
+        .build();
 
-    // app.connect_activate(build_ui);
-    // app.run();
+    app.connect_activate(build_ui);
+    app.run();
 }
 
 fn build_ui(application: &gtk::Application) {
